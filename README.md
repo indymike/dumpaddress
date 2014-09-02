@@ -13,22 +13,22 @@ Uses the right method for the job:
 
 Usage
 -----
-* $ getum --help 
-  Gets a list of commands
-  $ getum links --help
-  Gets help for links command
+**$ getum --help**
+Gets a list of commands
+**$ getum links --help**
+Gets help for links command
 
-* $ getum urls somefile.txt*
-  returns a list of urls contained in somefile.txt.
+**$ getum urls somefile.txt**
+returns a list of urls contained in somefile.txt.
 
-* $ getum emails somefile.txt*
-  returns a list of email addresses
+**$ getum emails somefile.txt**
+returns a list of email addresses
 
-* $ getum emails somefile.txt >emails.txt*
-  saves all of the emails in somefile.txt in emails.txt
+**$ getum emails somefile.txt >emails.txt**
+saves all of the emails in somefile.txt in emails.txt
 
-* $ getum links somefile.html
-  returns a list of unique links from file
+**$ getum links somefile.html**
+returns a list of unique links from file
 
 Notes
 -----

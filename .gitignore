@@ -52,3 +52,23 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# emacs artifcats
+*#
+*~
+
+# WingIDE artifacts
+*.wpu
+*.wpr
+
+# OS junk
+.directory
+
+# Secrets
+secrets*
+
+# Localsettings
+localsettings*
+
+# Sqlite
+*.sqlite
+*.sqlite3

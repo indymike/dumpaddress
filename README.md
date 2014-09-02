@@ -43,4 +43,4 @@ This application is licensed under the BSD License.
 
 Authors
 -------
-* Mike Seidle <http://www.github.com/indymike
+* Mike Seidle -- http://www.github.com/indymike

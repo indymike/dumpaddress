@@ -12,6 +12,16 @@ Uses the right method for the job:
 * Links are extracted by parsing the href attribute of <a> tags.
   You can also supply a value to prepend urls.
 
+Installation
+------------
+getum isn't in pypi just yet:
+
+1. git clone git@github.com:indymike/getum.git
+2. cd getum
+3. pip3 install .
+
+
+
 Usage
 -----
 **$ getum --help**

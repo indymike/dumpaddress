@@ -21,7 +21,6 @@ getum isn't in pypi just yet:
 3. pip3 install .
 
 
-
 Usage
 -----
 **$ getum --help**
@@ -50,6 +49,8 @@ Usage
 
 Notes
 -----
+* This was written to try out the excellent click command line
+  framework (http://click.pocoo.org/3/).  
 * Python 3 only. This does not support Python 2x. Really, let's
   move on to Python 3 already. It's really worth it.
 * Regular Expressions are useful when they work, but can create 

@@ -1,11 +1,9 @@
-getum
-=====
+dumpaddress
+===========
 
-Command line tool for extracting urls from any text file, links 
-from html(ish) files and emails from text files.   
-
+Command line tool for extracting addresses like urls and email addresses from any text file.
 Uses the right method for the job:
-
+----------------------------------
 * Emails are extracted using string processing instead of regular 
   expressions due to the complexity of RFC 5822.
 * URLs are extracted using a very well designed regex. 
@@ -16,34 +14,34 @@ Installation
 ------------
 getum isn't in pypi just yet:
 
-1. git clone git@github.com:indymike/getum.git
+1. git clone git@github.com:indymike/dumpaddress.git
 2. cd getum
 3. pip3 install .
 
 
 Usage
 -----
-**$ getum --help**
+**$ dumpaddress --help**
 
 *Gets a list of commands*
 
-**$ getum links --help**
+**$ dumpaddress links --help**
 
 *Gets help for links command*
 
-**$ getum urls somefile.txt**
+**$ dumpaddress urls somefile.txt**
 
 *returns a list of urls contained in somefile.txt.*
 
-**$ getum emails somefile.txt**
+**$ dumpaddress emails somefile.txt**
 
 *returns a list of email addresses*
 
-**$ getum emails somefile.txt >emails.txt**
+**$ dumpaddress emails somefile.txt >emails.txt**
 
 *saves all of the emails in somefile.txt in emails.txt*
 
-**$ getum links somefile.html**
+**$ dumpaddress links somefile.html**
 
 *returns a list of unique links from file*
 

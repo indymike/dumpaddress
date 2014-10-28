@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: dumpaddress
+Version: 0.1
+Summary: Command line tool for exctracting email addresses and urls from text files and links from html files.
+Home-page: http://github.com/indymike/dumpaddress
+Author: Mike Seidle
+Author-email: mike@seidle.net
+License: BSD
+Download-URL: https://github.com/indymike/dumpaddress
+Description: Extracts email addresses and urls from text and html files.
+Platform: POSIX

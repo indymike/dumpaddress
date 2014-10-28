@@ -1,0 +1,4 @@
+* Package for PyPi
+  [ ] Update requirements
+  [ ] Test install
+  [ ] Upload to PyPi

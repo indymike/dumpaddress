@@ -3,6 +3,7 @@ import click
 from unicodedata import category
 from html.parser import HTMLParser
 
+
 class AHrefParser(HTMLParser):
     """
     Parses links from <a> tags.
@@ -64,19 +65,12 @@ def get_urls(f):
     url_re = re.compile(url, re.VERBOSE | re.MULTILINE)
     return url_re.findall(f)
 
-def get_emails(f):
-    """
-    returns a list of emails found in string f
-    """
 
-    # re_emails = re.compile(r'(\b[\w.]+@+[\w.]+.+[\w.]\b)')
-    re_emails = re.compile(r'[\w.-]+@[\w.-]+')
-    return re_emails.findall(f)
 
 
 def get_hashtags(f):
     """
-    returns a list of hashtags found in file like object f
+    returns a list of hashtags found in file like object.
     """
     pass
 
@@ -100,6 +94,11 @@ def urls(infile):
                 type=click.File())
 def emails(infile):
     """Extract emails from file."""
+    
+    valid_chars = "!#$%&'*+-/=?.^_`{|}~"
+    valid_chars += 'abcdefghijklmnopqrstuvwxyz'
+    valid_chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    valid_chars += '0123456789'
     check_list = []
     words = infile.read()
     for w in words.split(' '):
@@ -111,9 +110,25 @@ def emails(infile):
                 w = w[0:-1] if category(w[-1]) != 'Ll' else w
             # clean up the address part.
             w = w[1:] if w[0] == '"' else w
+            w = w[1:] if w[0] == '.' else w
+            w = w[1:] if w[0] not in valid_chars else w
             w = w[7:] if w.lower().startswith('mailto:') else w
 
             click.echo(w)
+            
+@cli.command()
+@click.argument('infile',
+                type=click.File())
+def regex_emails(infile):
+    """
+    returns a list of emails found in infile
+    """
+
+    #re_emails = re.compile(r'(\b[\w.]+@+[\w.]+.+[\w.]\b)')
+    re_emails = re.compile(r'[\w.-]+@[\w.-]+')
+    #re_emails = re.compile(r'[\w\.-]+@[\w\.-]+')
+    for email in re_emails.findall(infile.read()):
+        click.echo(email)
 
 @cli.command()
 @click.argument('infile', 

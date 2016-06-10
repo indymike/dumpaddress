@@ -1,6 +1,8 @@
 dumpaddress
 ===========
 
+Python 3.3+ Supported. No Python 2.x. Sorry.
+
 Command line tool for extracting addresses like urls and email addresses from any text file.
 Uses the right method for the job:
 ----------------------------------

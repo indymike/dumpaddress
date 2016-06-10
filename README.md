@@ -56,6 +56,8 @@ Notes
 * Regular Expressions are useful when they work, but can create 
   very subtle failures. The URL probably has more than one way it 
   will fail to get urls, but it works well enough.
+* email_regex works pretty well. email works a little better but is 
+  slower.
 
 Known Issues
 ------------

@@ -15,7 +15,7 @@ Installation
 getum isn't in pypi just yet:
 
 1. git clone git@github.com:indymike/dumpaddress.git
-2. cd getum
+2. cd dumpaddress
 3. pip3 install .
 
 
